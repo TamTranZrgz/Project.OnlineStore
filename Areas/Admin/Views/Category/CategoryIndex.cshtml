@@ -1,8 +1,40 @@
 ﻿
 @{
-    ViewData["Title"] = "CategoryIndex";
+    ViewData["Title"] = "Category";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>CategoryIndex</h1>
+<div class="col-lg-12 stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Danh muc</h4>
+                <button class="btn btn-secondary" id="btnCategory">
+                    <span class="btn-label">
+                        <i class="fa fa-plus"></i>
+                    </span>
+                    Them Moi
+                </button>
+            </div>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> Ten danh muc </th>
+                        <th> Mo ta </th>
+                        <th> Kich hoat </th>
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody id="categoryList"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("CategoryModal")
+
+@section Scripts {
+    <script src="~/js/admin/category.js"></script>
+}
 

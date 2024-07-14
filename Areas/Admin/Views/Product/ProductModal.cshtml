@@ -1,0 +1,57 @@
+﻿@* Modal  *@    
+<div class="modal fade" id="productModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Khai bao thong tin san pham</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="productId" value="" hidden />
+                <div class="mb-3">
+                    <label for="tenSanPham" class="form-label fw-bold">Tên sản phẩm</label>
+                    <input type="text" class="form-control" id="tenSanPham" value="" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="danhMuc" class="form-label fw-bold">Danh mục</label>
+                    <select class="form-select" id="danhMuc" aria-label="Danh mục"></select>
+                </div>
+                <div class="mb-3">
+                    <label for="gia" class="form-label fw-bold">Giá</label>
+                    <input type="number" class="form-control" id="gia" value="" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="moTa" class="form-label">Mo ta</label>
+                    <textarea class="form-control" id="moTa" rows="3"></textarea>
+                </div> 
+                <div class="mb-3">
+                    <form class="col" enctype="multipart/form-data">
+                        <label for="formFile" class="form-label">Upload file anh</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </form>
+                </div>
+                <div class="mb-3">
+                    <label for="soLuongTonKho" class="form-label fw-bold">So luong ton kho</label>
+                    <input type="number" class="form-control" id="soLuongTonKho" value="" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="ngaySanXuat" class="form-label">Ngay san xuat</label>
+                    <input type="date" class="form-control" id="ngaySanXuat" value="" placeholder="">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="kichHoat" value="" checked="">
+                    <label class="form-check-label" for="kichHoat">
+                        Kich hoat
+                    </label>
+                </div>               
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal" onclick="ResetForm()">Huy bo</button>
+                <button class="btn btn-primary" onclick="CreateProduct()" id="btn-themMoi">Them moi</button>
+                <button class="btn btn-primary" onclick="UpdateProduct()" style="display: none" id="btn-capNhat">Cap nhat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                           
